@@ -19,28 +19,27 @@ jobs:
       - uses: actions/checkout@v2
 
       # install lerna
-      - name: install global dependencies
-        run: npm run install:app
+      - name: install dependencies
+        run: yarn
 
       - name: Build app
-        run: npm run build:app
+        run: yarn build
 
       - name: run tests
-        run: npm run test:app
+        run: yarn test
 
   build_and_test_in_windows_latest:
     runs-on: windows-latest
 
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+          # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
       # install lerna
-      - name: install global dependencies
-        run: npm run install:app
+      - name: install dependencies
+        run: yarn
 
       - name: Build app
-        run: npm run build:app
+        run: yarn build
 
       - name: run tests
-        run: npm run test:app
+        run: yarn test
