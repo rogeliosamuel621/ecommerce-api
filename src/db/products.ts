@@ -50,7 +50,7 @@ const products: IAllProducts = {
   ],
   bebidas: [
     {
-      id: 1,
+      id: 6,
       name: 'bebida',
       flavor: 'champurrado',
       description: 'Champurrado',
@@ -59,7 +59,7 @@ const products: IAllProducts = {
         'https://juan-jose-mayorga-projects.s3.amazonaws.com/react-native/guappjolotas/bebidas/champurradox2.png',
     },
     {
-      id: 2,
+      id: 7,
       name: 'bebida',
       flavor: 'atole',
       description: 'Atole de Arroz con Leche',
@@ -68,7 +68,7 @@ const products: IAllProducts = {
         'https://juan-jose-mayorga-projects.s3.amazonaws.com/react-native/guappjolotas/bebidas/arrozx2.png',
     },
     {
-      id: 3,
+      id: 8,
       name: 'bebida',
       flavor: 'chocolate',
       description: 'Chocolate Caliente',
@@ -77,7 +77,7 @@ const products: IAllProducts = {
         'https://juan-jose-mayorga-projects.s3.amazonaws.com/react-native/guappjolotas/bebidas/chocolatex2.png',
     },
     {
-      id: 4,
+      id: 9,
       name: 'bebida',
       flavor: 'cafe',
       description: 'Café Negro',
@@ -88,7 +88,7 @@ const products: IAllProducts = {
   ],
   tamales: [
     {
-      id: 1,
+      id: 10,
       name: 'tamal',
       flavor: 'verde',
       description: 'Tamal Verde',
@@ -97,7 +97,7 @@ const products: IAllProducts = {
         'https://juan-jose-mayorga-projects.s3.amazonaws.com/react-native/guappjolotas/tamales/verdex2.png',
     },
     {
-      id: 2,
+      id: 11,
       name: 'tamal',
       flavor: 'mole',
       description: 'Tamal de Mole',
@@ -106,7 +106,7 @@ const products: IAllProducts = {
         'https://juan-jose-mayorga-projects.s3.amazonaws.com/react-native/guappjolotas/tamales/molex2.png',
     },
     {
-      id: 3,
+      id: 12,
       name: 'tamal',
       flavor: 'guayaba',
       description: 'Tamal de Guayaba',
@@ -115,7 +115,7 @@ const products: IAllProducts = {
         'https://juan-jose-mayorga-projects.s3.amazonaws.com/react-native/guappjolotas/tamales/guayabax2.png',
     },
     {
-      id: 4,
+      id: 13,
       name: 'tamal',
       flavor: 'pina',
       description: 'Tamal de Piña',
@@ -124,7 +124,7 @@ const products: IAllProducts = {
         'https://juan-jose-mayorga-projects.s3.amazonaws.com/react-native/guappjolotas/tamales/pinax2.png',
     },
     {
-      id: 5,
+      id: 14,
       name: 'tamal',
       flavor: 'pasas',
       description: 'Tamal de Pasas',
