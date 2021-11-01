@@ -30,6 +30,16 @@ export class User {
 
 export const UserSchema = SchemaFactory.createForClass(User);
 
+export interface IUser {
+  id: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+  password: string;
+  cart: TCartItem[];
+  productsBought: IProduct[];
+}
+
 export interface IProduct {
   id: number;
   name: string;
