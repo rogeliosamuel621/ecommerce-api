@@ -5,6 +5,7 @@ import * as Joi from 'joi';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { appConfig, dbConfig, getEnvPath } from './common/config/env';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { appConfig, dbConfig, getEnvPath } from './common/config/env';
       }),
     }),
     MongooseModule.forRoot(dbConfig().MONGO_DB_URI),
+    AuthModule,
   ],
   providers: [AppService],
   controllers: [AppController],
