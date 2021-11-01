@@ -1,5 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
+import * as mongoose from 'mongoose';
 import {
   TCategoriesIds,
   TColors,
@@ -11,6 +12,8 @@ export type UserDocument = User & Document;
 
 @Schema()
 export class User {
+  @Prop({ type: mongoose.Schema.Types.ObjectId })
+  id: number;
   @Prop({ required: true })
   firstName: string;
   @Prop({ required: true })
