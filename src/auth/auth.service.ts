@@ -24,8 +24,8 @@ export class AuthService {
       const newUser = await this.dbUserService.saveUser(userToSave);
 
       return { data: newUser, statusCode: 200 };
-    } catch (error) {
-      if (error.message === DUPLICATED_EMAIL_ERROR) {
+    } catch ({ message }) {
+      if (message === DUPLICATED_EMAIL_ERROR) {
         return { statusCode: 400, data: null };
       }
 
