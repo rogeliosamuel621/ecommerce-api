@@ -16,6 +16,7 @@ export class UserRepository {
   async saveUser(user: TRegisterUser) {
     const newUser = new this.userModel(user);
     await newUser.save();
+    return newUser;
   }
 
   findOneByEmail(email: string, fields?: string[]) {
