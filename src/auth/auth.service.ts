@@ -12,7 +12,7 @@ export class AuthService {
   constructor(private dbUserService: DbUserService) {}
   async register(user: RegisterDto) {
     try {
-      if (this.dbUserService.findOneByEmail(user.email)) {
+      if (await this.dbUserService.findOneByEmail(user.email)) {
         throw new Error(DUPLICATED_EMAIL_ERROR);
       }
 

@@ -13,11 +13,15 @@ export class DbUserService {
   }
 
   async saveUser(user: TRegisterUser) {
+    console.log(user);
+
     const newUser = new this.userModel(user);
     await newUser.save();
   }
 
-  findOneByEmail(email: string, fields?: string[]) {
+  async findOneByEmail(email: string, fields?: string[]) {
+    console.log(await this.userModel.findOne({ email: email }, fields));
+
     return this.userModel.findOne({ email: email }, fields);
   }
 }
