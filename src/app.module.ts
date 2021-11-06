@@ -3,8 +3,8 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { dbConfig } from './common/config/values/values.config';
-import { AuthModule } from './auth/auth.module';
-import { DatabaseModule } from './database/database.module';
+import { AuthModule } from './app/auth/auth.module';
+import { DatabaseModule } from './app/database/database.module';
 import { ConfigModule } from './common/config/config.module';
 
 @Module({

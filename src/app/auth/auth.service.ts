@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { RegisterDto } from './dto/user.dto';
 import * as bcrypt from 'bcrypt';
 import { SALT } from 'src/common/config/constants.config';
-import { DbUserService } from 'src/database/services/DbUser.service';
+import { DbUserService } from 'src/app/database/services/DbUser.service';
 import { TRegisterUser } from 'src/common/interfaces.common';
 
 const DUPLICATED_EMAIL_ERROR = 'A user with that email already exists';

@@ -1,5 +1,5 @@
 import * as Mongoose from 'mongoose';
-import { IUser } from 'src/database/schemas/user.schema';
+import { IUser } from 'src/app/database/schemas/user.schema';
 
 export type TCurrency = 'USD' | 'MXN';
 
