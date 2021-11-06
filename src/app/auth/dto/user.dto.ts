@@ -1,7 +1,6 @@
 import { IsEmail, IsNotEmpty, IsString, Length } from 'class-validator';
-import { TRegisterUser } from 'src/common/interfaces.common';
 
-export class RegisterDto implements TRegisterUser {
+export class RegisterDto {
   @IsString()
   @IsNotEmpty()
   firstName: string;

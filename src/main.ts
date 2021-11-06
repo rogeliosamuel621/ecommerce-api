@@ -2,7 +2,6 @@ import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { AppModule } from './app.module';
-import { appConfig } from './common/config/values/values.config';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -26,6 +25,8 @@ async function bootstrap() {
   /**
    * Start of the app
    */
-  await app.listen(appConfig().PORT);
+  await app.listen(4000, () => {
+    console.log('Running on port 4000');
+  });
 }
 bootstrap();

@@ -1,5 +1,4 @@
 import * as Mongoose from 'mongoose';
-import { IUser } from 'src/app/database/schemas/user.schema';
 
 export type TCurrency = 'USD' | 'MXN';
 
@@ -18,7 +17,7 @@ export type TSizes = 'XS' | 'S' | 'M' | 'L' | 'XL' | 'XLL' | '2XL' | '3XL';
 
 export type TMongoId = Mongoose.Schema.Types.ObjectId;
 
-export type TRegisterUser = Pick<
-  IUser,
-  'email' | 'password' | 'firstName' | 'lastName'
->;
+// export type TRegisterUser = Pick<
+//   IUser,
+//   'email' | 'password' | 'firstName' | 'lastName'
+// >;

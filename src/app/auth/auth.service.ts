@@ -2,28 +2,25 @@ import { Injectable } from '@nestjs/common';
 import { RegisterDto } from './dto/user.dto';
 import * as bcrypt from 'bcrypt';
 import { SALT } from 'src/common/config/constants.config';
-import { DbUserService } from 'src/app/database/services/DbUser.service';
-import { TRegisterUser } from 'src/common/interfaces.common';
 
 const DUPLICATED_EMAIL_ERROR = 'A user with that email already exists';
 
 @Injectable()
 export class AuthService {
-  constructor(private dbUserService: DbUserService) {}
   async register(user: RegisterDto) {
     try {
-      if (await this.dbUserService.findOneByEmail(user.email)) {
-        throw new Error(DUPLICATED_EMAIL_ERROR);
-      }
+      // if (await this.dbUserService.findOneByEmail(user.email)) {
+      //   throw new Error(DUPLICATED_EMAIL_ERROR);
+      // }
 
-      const userToSave: TRegisterUser = {
+      const userToSave = {
         ...user,
         password: await this.hashPassword(user.password),
       };
 
-      const newUser = await this.dbUserService.saveUser(userToSave);
+      // const newUser = await this.dbUserService.saveUser(userToSave);
 
-      return { data: newUser, statusCode: 200 };
+      return { data: 0, statusCode: 200 };
     } catch ({ message }) {
       if (message === DUPLICATED_EMAIL_ERROR) {
         return { statusCode: 400, data: null };

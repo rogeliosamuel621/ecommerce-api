@@ -1,11 +1,12 @@
 import { HashMap } from '../../interfaces/utils.interface';
 
-export const appConfig = (): IAppConfig => ({
-  PORT: Number(process.env.PORT) || 4000,
-});
-
-export const dbConfig = (): IDbConfig => ({
-  MONGO_DB_URI: process.env.MONGO_DB_URI,
+export default () => ({
+  app: {
+    PORT: Number(process.env.PORT) || 4000,
+  },
+  db: {
+    MONGO_DB_URI: process.env.MONGO_DB_URI,
+  },
 });
 
 export const getEnvPath = (env: string): string => {
