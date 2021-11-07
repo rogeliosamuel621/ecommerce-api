@@ -1,6 +1,7 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { AuthService } from 'src/app/auth/auth.service';
 import { TPayload } from 'src/app/auth/interfaces/auth.interface';
+import { HttpResponse } from 'src/common/utils/HttpResponse.util';
 import { RegisterDto } from '../dto/user.dto';
 import { UserRepository } from '../repository/user.repository';
 
@@ -12,7 +13,7 @@ export class AuthUserService {
     private authService: AuthService,
     private userRepository: UserRepository,
   ) {}
-  async register(user: RegisterDto): Promise<string> {
+  async register(user: RegisterDto): Promise<HttpResponse<string>> {
     const userAlreadyExists = await this.authService.emailAlreadyExists(
       user.email,
     );
@@ -34,6 +35,6 @@ export class AuthUserService {
 
     const token = this.authService.createJWT(payload);
 
-    return token;
+    return new HttpResponse<string>(token);
   }
 }
