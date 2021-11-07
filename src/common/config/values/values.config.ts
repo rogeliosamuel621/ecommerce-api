@@ -1,6 +1,6 @@
 import { HashMap } from '../../interfaces/utils.interface';
 
-export default () => ({
+const configValues = () => ({
   app: {
     PORT: Number(process.env.PORT) || 4000,
     API_KEY: process.env.API_KEY,
@@ -28,3 +28,5 @@ export interface IAppConfig {
 export interface IDbConfig {
   MONGO_DB_URI: string;
 }
+
+export default configValues;
