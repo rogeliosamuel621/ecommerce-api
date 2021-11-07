@@ -10,3 +10,8 @@ export interface IUser {
   cart: TCartItem[];
   productsBought: IProduct[];
 }
+
+export type TRegisterUser = Pick<
+  IUser,
+  'email' | 'password' | 'firstName' | 'lastName'
+>;
