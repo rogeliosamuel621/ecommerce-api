@@ -4,7 +4,7 @@ import { SALT } from 'src/common/config/constants.config';
 import { UserRepository } from '../user/repository/user.repository';
 import { HttpResponse } from 'src/common/utils/HttpResponse.util';
 import { JwtService } from '@nestjs/jwt';
-import { RegisterDto } from '../user/dto/user.dto';
+import { RegisterDto } from '../user/dto/register.dto';
 import { TPayload } from './interfaces/auth.interfaces';
 
 const DUPLICATED_EMAIL_ERROR = 'A user with that email already exists';

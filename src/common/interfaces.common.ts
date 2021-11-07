@@ -16,8 +16,3 @@ export enum categories {
 export type TSizes = 'XS' | 'S' | 'M' | 'L' | 'XL' | 'XLL' | '2XL' | '3XL';
 
 export type TMongoId = Mongoose.Schema.Types.ObjectId;
-
-// export type TRegisterUser = Pick<
-//   IUser,
-//   'email' | 'password' | 'firstName' | 'lastName'
-// >;
