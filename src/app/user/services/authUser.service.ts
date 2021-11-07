@@ -1,6 +1,6 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { AuthService } from 'src/app/auth/auth.service';
-import { TPayload } from 'src/app/auth/interfaces/auth.interface';
+import { TPayload } from 'src/app/auth/interfaces/auth.interfaces';
 import { HttpResponse } from 'src/common/utils/HttpResponse.util';
 import { RegisterDto } from '../dto/user.dto';
 import { UserRepository } from '../repository/user.repository';
@@ -30,7 +30,7 @@ export class AuthUserService {
     const newUser = await this.userRepository.saveUser(userToSave);
 
     const payload: TPayload = {
-      id: newUser.id,
+      id: newUser._id,
     };
 
     const token = this.authService.createJWT(payload);

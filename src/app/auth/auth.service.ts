@@ -1,11 +1,11 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
-import { RegisterDto } from './dto/user.dto';
 import * as bcrypt from 'bcrypt';
 import { SALT } from 'src/common/config/constants.config';
 import { UserRepository } from '../user/repository/user.repository';
 import { HttpResponse } from 'src/common/utils/HttpResponse.util';
 import { JwtService } from '@nestjs/jwt';
-import { TPayload } from './interfaces/auth.interface';
+import { RegisterDto } from '../user/dto/user.dto';
+import { TPayload } from './interfaces/auth.interfaces';
 
 const DUPLICATED_EMAIL_ERROR = 'A user with that email already exists';
 

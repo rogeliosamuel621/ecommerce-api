@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model, QueryOptions } from 'mongoose';
-import { TRegisterUser } from 'src/app/auth/interfaces/auth.interface';
 import { TMongoId } from 'src/common/interfaces.common';
+import { TRegisterUser } from '../interfaces/user.interface';
 import { User, UserDocument } from '../schema/user.schema';
 
 @Injectable()
