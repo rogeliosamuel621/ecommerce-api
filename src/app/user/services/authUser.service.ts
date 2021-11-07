@@ -6,8 +6,8 @@ import {
 import { AuthService } from 'src/app/auth/auth.service';
 import { TPayload } from 'src/app/auth/interfaces/auth.interfaces';
 import { HttpResponse } from 'src/common/utils/HttpResponse.util';
-import { LoginDto } from '../dto/login.dto';
-import { RegisterDto } from '../dto/register.dto';
+import { LoginDto, LoginResponse } from '../dto/login.dto';
+import { RegisterDto, RegisterResponse } from '../dto/register.dto';
 import { UserRepository } from '../repository/user.repository';
 
 const DUPLICATED_EMAIL_ERROR = 'A user with that email already exists';
@@ -18,7 +18,7 @@ export class AuthUserService {
     private authService: AuthService,
     private userRepository: UserRepository,
   ) {}
-  async register(user: RegisterDto): Promise<HttpResponse<string>> {
+  async register(user: RegisterDto): Promise<LoginResponse> {
     const userAlreadyExists = await this.authService.emailAlreadyExists(
       user.email,
     );
@@ -43,7 +43,7 @@ export class AuthUserService {
     return new HttpResponse<string>(token);
   }
 
-  async login({ email, password }: LoginDto): Promise<HttpResponse<string>> {
+  async login({ email, password }: LoginDto): Promise<RegisterResponse> {
     const userByEmail = await this.userRepository.findOneByEmail(email, [
       'password',
     ]);
