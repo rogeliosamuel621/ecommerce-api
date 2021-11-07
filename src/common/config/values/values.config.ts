@@ -4,6 +4,7 @@ const configValues = () => ({
   app: {
     PORT: Number(process.env.PORT) || 4000,
     API_KEY: process.env.API_KEY,
+    JWT_SECRET: process.env.JWT_SECRET,
   },
   db: {
     MONGO_DB_URI: process.env.MONGO_DB_URI,
