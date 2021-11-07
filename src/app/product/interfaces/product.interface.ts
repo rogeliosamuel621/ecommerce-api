@@ -26,7 +26,14 @@ export interface IImage {
 
 export type TCurrency = 'USD' | 'MXN';
 
-export type TColors = 'black' | 'white';
+export type TColors =
+  | 'black'
+  | 'white'
+  | 'blue'
+  | 'gray'
+  | 'pink'
+  | 'green'
+  | 'red';
 
 export type TCategoriesIds = 1 | 2 | 3 | 4;
 
